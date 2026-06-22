@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: #0F0C08;
+  color: #EDE3D3;
+}
+
+.glass {
+  background: rgba(30, 26, 20, 0.92);
+  backdrop-filter: blur(24px);
+  border: 1px solid rgba(139, 111, 71, 0.2);
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, #D4A24C, #F4D35E);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.instrument-pad {
+  transition: all 0.08s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.instrument-pad:active {
+  transform: scale(0.94);
+  box-shadow: 0 0 0 3px #D4A24C;
+}
+
+.note {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 9999px;
+  color: #0F0C08;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.3);
+  cursor: pointer;
+}
+
+.falling-note {
+  animation: noteFall 2.4s linear forwards;
+  box-shadow: 0 0 18px #D4A24C;
+}
+
+@keyframes noteFall {
+  0% { transform: translateY(-80px); opacity: 1; }
+  100% { transform: translateY(210px); opacity: 0.15; }
+}
+
+.chat-bubble.ai {
+  background: #1E2A4A;
+  border-bottom-left-radius: 4px;
+}
+
+.chat-bubble.user {
+  background: #D4A24C;
+  color: #0F0C08;
+  border-bottom-right-radius: 4px;
+}
+
+.game-container {
+  background: linear-gradient(#1E2A4A, #0F0C08);
+  border: 2px solid #8B6F47;
+}
+
+.revenue-card {
+  transition: all 0.2s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.revenue-card:hover {
+  transform: translateY(-3px);
+}
