@@ -92,3 +92,4 @@ export async function POST(req: NextRequest) {
   const balance = (data ?? []).reduce((sum, row) => sum + Number(row.amount), 0);
   return NextResponse.json({ balance });
 }
+console.log("DEBUG_SUPABASE_URL:", process.env.NEXT_PUBLIC_SUPABASE_URL);
