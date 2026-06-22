@@ -86,3 +86,4 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: `Network error reaching Gemini: ${err?.message ?? err}` }, { status: 502 });
   }
 }
+console.log("DEBUG_KEY_CHECK:", process.env.GEMINI_API_KEY ? "KEY_FOUND" : "KEY_MISSING");
